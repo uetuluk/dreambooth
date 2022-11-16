@@ -17,9 +17,11 @@ train: ## run the train command
 		--class_prompt="$(CLASS_PROMPT)" \
 		--resolution=$(RESOLUTION) \
 		--train_batch_size=1 \
-		--gradient_accumulation_steps=1 \
+		--sample_batch_size=1 \
+		--gradient_accumulation_steps=1 --gradient_checkpointing \
 		--learning_rate=5e-6 \
 		--lr_scheduler="constant" \
 		--num_class_images=200 \
 		--lr_warmup_steps=0 \
-		--max_train_steps=400
+		--max_train_steps=800 \
+		--mixed_precision=fp16
