@@ -1,4 +1,5 @@
 /models
 .envrc
-train_input
-train_output
+/train_input
+/train_output
+/train_class
