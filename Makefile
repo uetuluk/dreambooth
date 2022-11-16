@@ -2,6 +2,10 @@ help: ## display this help message
 	@echo "Please use \`make <target>' where <target> is one of"
 	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | sort | awk -F ':.*?## ' 'NF==2 {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
+MODEL_NAME ?="./models/stable-diffusion-v1-5"
+INSTANCE_DIR ?="./train_input"
+CLASS_DIR ?="./train_class"
+OUTPUT_DIR ?="./train_output"
 PROMPT ?= "a photo of sks dog"
 CLASS_PROMPT ?= "a photo of dog"
 RESOLUTION ?= 512
