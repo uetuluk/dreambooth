@@ -1,1 +1,4 @@
 /models
+.envrc
+train_input
+train_output
