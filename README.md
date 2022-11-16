@@ -9,7 +9,7 @@ CUDA Toolkit - https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 
 ### Install
 ```bash
-python -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Dreambooth
